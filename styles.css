@@ -310,16 +310,13 @@ footer { padding: 40px 0; border-top: 1px solid var(--border-light); margin-top:
 }
 
 .project-visual {
-    height: 350px;
+    height: 220px; 
     background: var(--bg-surface);
     border-radius: 12px;
     overflow: hidden;
     position: relative;
-    
     border: 1px solid var(--border-light); 
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
+    background-size: contain !important;       
+    background-repeat: no-repeat !important; 
     background-position: top center !important; 
 }
-
-*/
