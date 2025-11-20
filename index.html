@@ -1,170 +1,237 @@
-<!doctype html>
-<html lang="en" data-theme="auto">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mark Jebens - Software Engineer</title>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <meta name="description" content="Software engineer building scalable dashboards and data-driven tools." />
-    <meta property="og:title" content="Mark Jebens — Software Engineer" />
-    <meta property="og:description" content="Software engineer building scalable dashboards and data-driven tools." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="/og.png" />
-    <link rel="stylesheet" href="styles.css" />
-    <script>
-        (function () {
-            const saved = localStorage.getItem("theme");
-            const root = document.documentElement;
-            root.setAttribute("data-theme", saved ? saved : "auto");
-        })();
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Jebens | Software Engineer</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="page">
-    <header class="topbar">
-        <span class="brand">Mark Jebens</span>
-        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme" title="Toggle theme" aria-pressed="false">
-            <svg class="icon sun" viewBox="0 0 24 24" aria-hidden="true" fill="none">
-                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
-                <path d="M12 3v2M12 19v2M21 12h-2M5 12H3M18.364 5.636l-1.414 1.414M7.05 16.95l-1.414 1.414M18.364 18.364l-1.414-1.414M7.05 7.05L5.636 5.636" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <svg class="icon moon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3a7.002 7.002 0 0 0 9.79 9.79z"/>
-            </svg>
-        </button>
-    </header>
 
-    <main class="wrap">
-        <article class="card">
-            <img class="avatar" src="pfp.jpg" alt="Mark Jebens" />
-            <h1 class="title">Mark Jebens</h1>
-            <p class="subtle">Software Engineer | React & Node.js Specialist | Scalable Systems | Building High-Performance Dashboards & Data Platforms</p>
-            <div class="pill-row">
-                <a id="emailLink" class="pill"
-                   data-u="bWFya2plYmVucw=="
-                   data-d="Z21haWwuY29t">
-                Email
-                </a>
-                <a class="pill" href="https://github.com/markjebens" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a class="pill" href="https://www.linkedin.com/in/mark-jebens/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <canvas id="ambient-canvas"></canvas>
+
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <a href="#hero" class="logo">Mark Jebens<span class="period">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact" class="btn-nav">Get in touch</a></li>
+            </ul>
+            <div class="mobile-menu-toggle">
+                <div class="line"></div><div class="line"></div>
             </div>
-        </article>
-    </main>
+        </div>
+    </nav>
 
-    <footer class="foot">
-        <small>© <span id="year"></span> Mark Jebens</small>
+    <section id="hero">
+        <div class="container hero-content">
+            <h1 class="hero-title reveal-text">
+                Engineering complex<br>
+                <span class="highlight">systems</span> with precision.
+            </h1>
+            <p class="hero-sub reveal-text delay-1">
+                Full-Stack Software Engineer specialising in building scalable web applications with React, Next.js, Node.js, and C# .NET. Experienced in financial modelling and project management, with a focus on delivering robust, efficient solutions.
+            </p>
+            <div class="hero-actions reveal-text delay-2">
+                <a href="#experience" class="btn-primary">View Experience</a>
+                <a href="#contact" class="btn-secondary">Contact Me</a>
+            </div>
+        </div>
+        
+        <div class="scroll-cue">
+            <div class="mouse-icon">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <section id="about" class="section-spacing">
+        <div class="container">
+            <div class="split-layout">
+                <div class="section-label reveal-up">01 / About</div>
+                <div class="content-block reveal-up">
+                    <h2 class="heading-lg">Technical depth meets<br>creative vision.</h2>
+                    <p class="text-body">
+                        I am a Full-Stack Engineer currently based in Cape Town, South Africa. My career has evolved from high-level graphic design to complex IT engineering and software development.
+                    </p>
+                    <p class="text-body">
+                        With a strong foundation in C#, PHP, and modern JavaScript ecosystems, I specialize in building robust infrastructures and user-centric applications. I also bring significant experience in Azure DevOps and financial modeling.
+                    </p>
+                    
+                    <div class="tech-stack-minimal">
+                        <span>TypeScript & React</span>
+                        <span>Next.js</span>
+                        <span>Tailwind CSS</span>
+                        <span>C# / ASP.NET</span>
+                        <span>Azure & DevOps</span>
+                        <span>PHP / Laravel</span>
+                        <span>SQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section-spacing bg-subtle">
+        <div class="container">
+            <div class="split-layout">
+                <div class="section-label reveal-up">02 / Experience</div>
+                <div class="experience-list reveal-up">
+                    
+                    <div class="job-row">
+                        <div class="job-date">Nov 2024 — Present</div>
+                        <div class="job-detail">
+                            <h4>Software Engineer</h4>
+                            <span class="company">Precise Digital • Auckland, NZ (Remote)</span>
+                            <p>Full-stack development focusing on scalable web architectures, API integration, and DevOps pipelines.</p>
+                            <div class="job-tags">
+                                <span>React.js</span><span>Node.js</span><span>TypeScript</span><span>Tailwind CSS</span><span>PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job-row">
+                        <div class="job-date">Nov 2022 — Oct 2024</div>
+                        <div class="job-detail">
+                            <h4>IT Engineer & Project Manager</h4>
+                            <span class="company">Phelan Green Energy • Cape Town</span>
+                            <p>Managed Azure cloud infrastructure, led agile projects, and developed financial models. Handled network security, asset management, and SharePoint administration.</p>
+                            <div class="job-tags">
+                                <span>Microsoft Azure</span><span>Financial Modeling</span><span>SharePoint</span><span>Agile</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job-row">
+                        <div class="job-date">Aug 2021 — Nov 2022</div>
+                        <div class="job-detail">
+                            <h4>Software Engineer</h4>
+                            <span class="company">Bermont Digital • South Africa</span>
+                            <p>Developed and implemented ASP.NET Web Forms solutions and PHP Laravel applications. Transitioned from contract C# Developer to Full-time Engineer.</p>
+                            <div class="job-tags">
+                                <span>C# .NET</span><span>PHP Laravel</span><span>Tailwind CSS</span><span>Git</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job-row">
+                        <div class="job-date">2018 — 2023</div>
+                        <div class="job-detail">
+                            <h4>Graphic Designer & Social Manager</h4>
+                            <span class="company">White Rabbit Gaming & Goliath Gaming</span>
+                            <p>Lead creative direction and social media management for major esports organizations.</p>
+                            <div class="job-tags">
+                                <span>Graphic Design</span><span>Brand Strategy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="section-spacing">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-label">03 / Latest Work</span>
+            </div>
+
+            <div class="project-list">
+                
+                <div class="project-item reveal-up">
+                    <div class="project-info">
+                        <h3 class="project-title">Client Dashboard</h3>
+                        <p class="project-desc">A high-performance analytics dashboard for Precise Digital clients to view real-time anlytical and products data.</p>
+                        <div class="tags">
+                            <span>React</span><span>Next.js</span><span>Tailwind</span><span>PostgreSQL</span>
+                        </div>
+                        <span class="btn-link disabled">Private Software</span>
+                    </div>
+                    <div class="project-visual">
+                        <div class="glass-panel"></div>
+                    </div>
+                </div>
+
+                <div class="project-item reveal-up">
+                    <div class="project-info">
+                        <h3 class="project-title">Admin Dashboard</h3>
+                        <p class="project-desc">Internal management tool for Precise Digital allowing granular control over users and reporting and statements.</p>
+                        <div class="tags">
+                            <span>Javascript</span><span>SQL</span><span>Bootstrap 5</span>
+                        </div>
+                        <span class="btn-link disabled">Private Software</span>
+                    </div>
+                    <div class="project-visual">
+                        <div class="glass-panel"></div>
+                    </div>
+                </div>
+
+                <div class="project-item reveal-up">
+                    <div class="project-info">
+                        <h3 class="project-title">Digital EPC System</h3>
+                        <p class="project-desc">Engineering procurement construction system to track renewable assets.</p>
+                        <div class="tags">
+                            <span>React</span><span>Next.js</span><span>Tailwind</span><span>PostgreSQL</span>
+                        </div>
+                        <span class="btn-link disabled">Private Software</span>
+                    </div>
+                    <div class="project-visual">
+                        <div class="glass-panel"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-spacing">
+        <div class="container small-container">
+            <div class="text-center reveal-up">
+                <h2 class="heading-lg">Let's discuss your<br>next project.</h2>
+                <p class="text-body" style="margin: 2rem auto;">
+                    Open to engineering opportunities and new projects.
+                </p>
+                <a id="email-link" class="email-link"></a>
+                
+                <div class="social-row">
+                    <a href="https://www.linkedin.com/in/mark-jebens" target="_blank" rel="noopener noreferrer">
+                    LinkedIn
+                    </a>
+                    <a href="https://github.com/markjebens" target="_blank" rel="noopener noreferrer">
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <span>&copy; 2025 Mark Jebens</span>
+                <span>Portfolio</span>
+            </div>
+        </div>
     </footer>
-</div>
 
-<script>
-    (function () {
-        const email = "markjebens@gmail.com";
-        const link = document.getElementById("emailLink");
-
-        function showToast(message) {
-            const el = document.createElement("div");
-            el.className = "toast";
-            el.setAttribute("role", "status");
-            el.textContent = message;
-            document.body.appendChild(el);
-            requestAnimationFrame(() => el.classList.add("show"));
-            setTimeout(() => {
-                el.classList.remove("show");
-                setTimeout(() => el.remove(), 200);
-            }, 1800);
-        }
-
-        link.addEventListener("click", () => {
-            const tryClipboard = navigator.clipboard?.writeText
-                ? navigator.clipboard.writeText(email).then(() => true).catch(() => false)
-                : Promise.resolve(false);
-
-            tryClipboard.then((ok) => {
-                if (!ok) {
-                    const ta = document.createElement("textarea");
-                    ta.value = email;
-                    ta.style.position = "fixed";
-                    ta.style.opacity = "0";
-                    document.body.appendChild(ta);
-                    ta.select();
-                    try { document.execCommand("copy"); } catch {}
-                    ta.remove();
-                }
-                showToast("Email copied to clipboard");
-            });
-        });
-    })();
-
-    (function () {
-        const link = document.getElementById("emailLink");
-
-        function decode(b64) { try { return atob(b64); } catch { return ""; } }
-        function emailFrom(el) {
-            const u = decode(el.dataset.u || "");
-            const d = decode(el.dataset.d || "");
-            return u && d ? `${u}@${d}` : "";
-        }
-
-        function showToast(message) {
-            const el = document.createElement("div");
-            el.className = "toast";
-            el.setAttribute("role", "status");
-            el.textContent = message;
-            document.body.appendChild(el);
-            requestAnimationFrame(() => el.classList.add("show"));
-            setTimeout(() => { el.classList.remove("show"); setTimeout(() => el.remove(), 200); }, 1800);
-        }
-
-        link.addEventListener("click", (e) => {
-            const addr = emailFrom(link);
-            if (!addr) return;
-            link.setAttribute("href", `mailto:${addr}`);
-
-            const tryClipboard = navigator.clipboard?.writeText
-                ? navigator.clipboard.writeText(addr).then(() => true).catch(() => false)
-                : Promise.resolve(false);
-
-            tryClipboard.finally(() => showToast("Email copied to clipboard"));
-        }, { once: false });
-    })();
-
-    (function () {
-        const root = document.documentElement;
-        const btn = document.getElementById("themeToggle");
-        const sun = document.querySelector(".sun");
-        const moon = document.querySelector(".moon");
-
-        const currentTheme = () => {
-            const t = root.getAttribute("data-theme");
-            if (t === "auto") {
-                return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-            }
-            return t;
-        };
-
-        const reflectIcons = (mode) => {
-            sun.classList.toggle("active", mode === "light");
-            moon.classList.toggle("active", mode === "dark");
-        };
-
-        const applyTheme = (t) => {
-            root.setAttribute("data-theme", t);
-            localStorage.setItem("theme", t);
-            btn.setAttribute("aria-pressed", t === "dark");
-            reflectIcons(t);
-        };
-
-        const initial = currentTheme();
-        btn.setAttribute("aria-pressed", initial === "dark");
-        reflectIcons(initial);
-
-        btn.addEventListener("click", () => {
-            const next = currentTheme() === "dark" ? "light" : "dark";
-            applyTheme(next);
-        });
-
-        document.getElementById("year").textContent = new Date().getFullYear();
-    })();
-</script>
+    <script src="script.js"></script>
 </body>
 </html>
+
+<script>
+  const user = "markjebens";
+  const domain = "gmail.com";
+  const link = document.getElementById("email-link");
+
+  link.href = `mailto:${user}@${domain}`;
+  link.textContent = `${user}@${domain}`;
+</script>
