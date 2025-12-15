@@ -288,4 +288,5 @@ footer { padding: 40px 0; border-top: 1px solid var(--border-light); margin-top:
     .project-item { display: flex; flex-direction: column; gap: 20px; }
     .project-visual { order: -1; height: 250px; }
     .nav-links { display: none; }
+    .scroll-cue { bottom: 50px; }
 }
