@@ -218,7 +218,7 @@
     <footer>
         <div class="container">
             <div class="footer-inner">
-                <span>&copy; 2025 Mark Jebens</span>
+                <span>&copy; <span id="current-year"></span> Mark Jebens</span>
                 <span>Portfolio</span>
             </div>
         </div>
@@ -239,6 +239,9 @@
         const link = document.getElementById("email-link");
         link.href = `mailto:${user}@${domain}`;
         link.textContent = `${user}@${domain}`;
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
 
         // Mobile menu toggle
         const menuToggle = document.querySelector('.mobile-menu-toggle');
